@@ -34,7 +34,7 @@ export default function Home(){
  const exportCSV=()=>{const csv=["Cédula,Empleado,Cargo,Días,Valor día,Salario,Horas extra,Propinas,Anticipos,Créditos,Descuento llegada tarde,Descuento uniforme,Neto",...rows.map(r=>[r.e.document,r.e.name,r.e.role,r.days,r.e.rate,r.salary,r.overtime,r.tips,r.advance,r.credit,r.lateDiscount,r.uniformDiscount,r.net].join(","))].join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="nomina-"+period+".csv";a.click();URL.revokeObjectURL(a.href);};
  return <div className="min-h-screen md:flex">
   <aside className="no-print w-full md:w-[245px] bg-white border-r border-slate-200 p-5 md:min-h-screen md:fixed md:inset-y-0">
-   <div className="flex items-center gap-3 mb-8"><div className="w-10 h-10 rounded-xl bg-emerald-800 text-white grid place-items-center font-bold">MC</div><div><b className="block text-sm">El Mirador del Cielo</b><span className="text-xs muted">Control de nómina</span></div></div>
+   <div className="mb-7 rounded-xl bg-[#fff8df] p-3 flex justify-center"><img src="/logo.svg" alt="Mirador del Cielo" className="w-full max-w-[175px] h-auto object-contain" /></div>
    <div className="text-[10px] font-bold tracking-widest muted mb-3">MENÚ PRINCIPAL</div>
    {nav.map(([id,label,Icon])=><button key={id} onClick={()=>setTab(id)} className={"navitem mb-1 "+(tab===id?"active":"")}><Icon size={18}/>{label}</button>)}
    <div className="mt-10 p-3 rounded-xl bg-emerald-50 text-xs text-emerald-900"><b>Control interno</b><p className="mt-1 leading-5">Registra asistencia y administra los pagos de tu equipo.</p></div>
