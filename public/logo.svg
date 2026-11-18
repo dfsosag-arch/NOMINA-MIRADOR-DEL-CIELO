@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 604"><image width="360" height="604" href="data:image/jpeg;base64,DATA_PLACEHOLDER"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t d">
+<title id="t">Mirador del Cielo</title><desc id="d">Emblema con sol, camino, taza de café y montañas verdes</desc>
+<defs><clipPath id="arch"><path d="M45 220V111a91 91 0 0 1 182 0v109z"/></clipPath></defs>
+<g transform="translate(12 8)">
+<path d="M30 224V111a106 106 0 0 1 212 0v113a106 106 0 0 1-212 0z" fill="#fff" stroke="#174b3c" stroke-width="8"/>
+<g clip-path="url(#arch)">
+<path d="M38 124L136 18l104 106z" fill="#f5a33b"/><path d="M38 125h202v39H38z" fill="#ef792d"/>
+<path d="M38 166L136 92l104 74v65H38z" fill="#e9432c"/>
+<path d="M38 232L111 114h70l69 118z" fill="#a9ddf5"/>
+<path d="M136 91V8M136 91L76 25M136 91L35 61M136 91L195 25M136 91L237 61" stroke="#172e29" stroke-width="7" stroke-linecap="round"/>
+<circle cx="136" cy="91" r="27" fill="#f8cb45" stroke="#172e29" stroke-width="6"/>
+<path d="M119 115l-74 116M153 115l76 116" stroke="#e93627" stroke-width="14"/>
+<path d="M50 233q48-29 93 0t95 0v48H50z" fill="#0b5a43"/>
+<path d="M42 239q53-33 106 0t94 0" fill="none" stroke="#8eb80d" stroke-width="23"/>
+<path d="M80 228l24 33m-1-36 31 43m-4-41 34 45" stroke="#174b3c" stroke-width="4"/>
+<path d="M116 190h42a17 17 0 0 1 0 34h-42a17 17 0 0 1 0-34z" fill="#fff8df" stroke="#174b3c" stroke-width="5"/>
+<path d="M158 196h8a12 12 0 0 1 0 24h-8" fill="none" stroke="#174b3c" stroke-width="5"/>
+</g></g>
+<text x="286" y="132" font-family="Georgia,serif" font-size="72" font-weight="700" letter-spacing="2" fill="#174b3c">MIRADOR</text>
+<text x="292" y="206" font-family="Georgia,serif" font-size="70" font-style="italic" fill="#174b3c">del CIELO</text>
+<path d="M292 228h365" stroke="#e6ad35" stroke-width="5" stroke-linecap="round"/>
+<text x="294" y="263" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" fill="#718078">CAFETERÍA</text>
+</svg>
