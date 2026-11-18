@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, statusBarStyle: "default", title: "Nómina Mirador" },
   icons: { icon: "/icon.svg", apple: "/icon.svg" },
 };
-export const viewport: Viewport = { themeColor: "#174b3c", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#F1842E", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="es"><body>{children}</body></html>;
