@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Nómina – El Mirador del Cielo",
+  "short_name": "Nómina Mirador",
+  "description": "Control de nómina de Cafetería El Mirador del Cielo",
+  "lang": "es-CO",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f6f8",
+  "theme_color": "#075b45",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
