@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><image width="512" height="512" href="data:image/jpeg;base64,ICON_PLACEHOLDER"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#174b3c"/>
+<path d="M88 366V204a168 168 0 0 1 336 0v162a168 168 0 0 1-336 0z" fill="#fff8df" stroke="#fff" stroke-width="12"/>
+<path d="M105 206L256 55l151 151z" fill="#f5a33b"/><path d="M105 207h302v72H105z" fill="#ef792d"/>
+<path d="M105 279l151-94 151 94v105H105z" fill="#e9432c"/>
+<path d="M105 383l112-186h78l112 186z" fill="#a9ddf5"/>
+<path d="M256 185V64M256 185l-84-91m84 91 84-91" stroke="#174b3c" stroke-width="13"/>
+<circle cx="256" cy="185" r="39" fill="#f8cb45" stroke="#174b3c" stroke-width="10"/>
+<path d="M111 383q73-46 145 0t145 0v48H111z" fill="#8eb80d"/>
+<path d="M111 404q73-46 145 0t145 0" fill="none" stroke="#075b45" stroke-width="25"/>
+<path d="M214 316h72a25 25 0 0 1 0 50h-72a25 25 0 0 1 0-50z" fill="#fff8df" stroke="#174b3c" stroke-width="10"/>
+<path d="M286 324h14a18 18 0 0 1 0 36h-14" fill="none" stroke="#174b3c" stroke-width="10"/>
+</svg>
