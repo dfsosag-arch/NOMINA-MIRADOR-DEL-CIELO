@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { LayoutDashboard, Users, CalendarDays, Wallet, ReceiptText, Menu, Plus, Search, ChevronLeft, ChevronRight, Download, Printer, Trash2, Pencil, X, CheckCircle2, TrendingUp, Banknote, Clock3 } from "lucide-react";
 
 type Employee={id:string,document:string,name:string,role:string,rate:number,active:boolean,joined:string};
@@ -18,7 +18,7 @@ export default function Home(){
  const persist=(key:string,value:unknown)=>{localStorage.setItem("mc_"+key,JSON.stringify(value));setNotice("Cambios guardados");setTimeout(()=>setNotice(""),2200)};
  const saveEmployees=(v:Employee[])=>{setEmployees(v);persist("employees",v)},saveAttendance=(v:Attendance[])=>{setAttendance(v);persist("attendance",v)},saveDebts=(v:Debt[])=>{setDebts(v);persist("debts",v)},saveExtras=(v:Extra[])=>{setExtras(v);persist("extras",v)};
  const active=employees.filter(e=>e.active);
- const rows=useMemo(()=>active.map(e=>{const days=attendance.filter(a=>a.employeeId===e.id&&a.date.startsWith(period)).length;const x=extras.find(x=>x.employeeId===e.id&&x.period===period);const advance=debts.filter(d=>d.employeeId===e.id&&d.type==="Anticipo"&&d.date.startsWith(period)).reduce((s,d)=>s+Math.max(0,d.amount-d.paid),0);const credit=debts.filter(d=>d.employeeId===e.id&&d.type==="Crédito").reduce((s,d)=>s+Math.min(d.amount-d.paid, d.date<=period+"-31"?d.amount-d.paid:0),0);const salary=days*e.rate,income=salary+(x?.overtime||0)+(x?.tips||0),net=income-advance-credit;return {e,days,salary,overtime:x?.overtime||0,tips:x?.tips||0,advance,credit,income,net}}),[active,attendance,debts,extras,period]);
+ const rows=useMemo(()=>active.map(e=>{const days=attendance.filter(a=>a.employeeId===e.id&&a.date.startsWith(period)).length;const x=extras.find(x=>x.employeeId===e.id&&x.period===period);const advance=debts.filter(d=>d.employeeId===e.id&&d.type==="Anticipo"&&d.date.startsWith(period)).reduce((s,d)=>s+Math.max(0,d.amount-d.paid),0);const credit=debts.filter(d=>d.employeeId===e.id&&d.type==="Crédito"&&d.date.startsWith(period)).reduce((s,d)=>s+Math.max(0,d.amount-d.paid),0);const salary=days*e.rate,income=salary+(x?.overtime||0)+(x?.tips||0),net=income-advance-credit;return {e,days,salary,overtime:x?.overtime||0,tips:x?.tips||0,advance,credit,income,net}}),[active,attendance,debts,extras,period]);
  const total=(k:"days"|"income"|"advance"|"credit"|"net")=>rows.reduce((s,r)=>s+r[k],0);
  const changeMonth=(n:number)=>{const [y,m]=period.split("-").map(Number);const d=new Date(y,m-1+n,1);setPeriod(d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0"))};
  const title=({dashboard:"Resumen general",employees:"Empleados",attendance:"Asistencia",debts:"Créditos y anticipos",payroll:"Liquidación de nómina"} as Record<Tab,string>)[tab];
